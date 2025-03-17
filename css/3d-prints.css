@@ -1,0 +1,56 @@
+#main_accordion {
+	text-align: center;
+}
+
+#main_accordion div {
+	max-height: 90vh;
+}
+
+.w3-container {
+	text-align: center;
+}
+
+.lg-toolbar-next:before {
+  content: "\e094";
+}
+.lg-toolbar-prev:before {
+  content: "\e095";
+}
+
+.gallery-item {
+	display: inline-flex;
+	width: 200px;
+	padding: 5px;
+}
+
+div.accordion-body {
+	display: inline-block;
+  	position: relative;
+	padding: 16px 90px;
+}
+div.work-in-progress {
+  	overflow: hidden;	
+}
+
+div.work-in-progress:before {
+    content: "Work In Progress";
+    position: absolute;
+    top: 18px;
+    right: -43px;
+    width: 150px;
+    text-align: center;
+    transform: rotate(45deg);
+    background: peru;
+    padding: 10px;
+    color: white;
+    font-size: 9px;
+    font-weight: 600;
+}
+
+a#toggle-additional-projects {
+	color: #535353;
+}
+
+footer {
+	background-color: dimgray;
+}
