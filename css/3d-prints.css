@@ -27,6 +27,7 @@ div.accordion-body {
 	display: inline-block;
   	position: relative;
 	padding: 16px 90px;
+	background-color: dimgrey;
 }
 div.work-in-progress {
   	overflow: hidden;	
@@ -48,9 +49,17 @@ div.work-in-progress:before {
 }
 
 a#toggle-additional-projects {
-	color: #535353;
+	color: #595959;
 }
 
 footer {
 	background-color: dimgray;
+}
+
+.social-links {
+	color: honeydew;
+}
+
+.social-links:hover {
+	color: khaki;
 }
