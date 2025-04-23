@@ -14,6 +14,21 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
   text-shadow: -2px 2px 6px #214567;
 }
 
+footer {
+  /* position: fixed; */
+  bottom: 0px;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  #rightCol {
+    height: 99vh;
+    position: sticky;
+    top: 0px;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+}
 </style>
 </head>
 <body class="w3-light-grey">
@@ -22,10 +37,10 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
   <!-- The Grid -->
-  <div class="w3-row-padding">
+  <div class="w3-row-padding" style="height: auto;">
   
     <!-- Left Column -->
-    <div class="w3-third">
+    <div class="w3-third" id="leftCol">
     
       <div class="w3-white w3-text-grey w3-card-4">
         <div class="w3-display-container">
@@ -43,6 +58,8 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
           <p><i class="fa fa-download fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a download href="../media/resume_jd_martin.pdf" class="w3-hover-light-green">PDF Resume</a></p>
           <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a href="https://www.linkedin.com/in/jd-martin-1136b42/" target="_blank">LinkedIn Profile</a></p>
+          <p><i class="fa fa-university fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a href="#Education">Education</a></p>
+          <p><i class="fa fa-certificate fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a href="#Certificates">Licenses & Certificates</a></p>
           <hr>
 
           <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue-gray"></i>Current Proficiencies</b></p>
@@ -79,12 +96,13 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </div>
 
     <!-- Right Column -->
-    <div class="w3-twothird">
+    <div class="w3-twothird"  id="rightCol">
     
       <div class="w3-container w3-card w3-white w3-margin-bottom">
         <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Work Experience</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Data Conversion Specialist / Roswell Park Comprehensive Cancer Center</b></h5>
+          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Buffalo, NY / Remote</h6>
           <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>September 2022 - September 2024</h6>
           <div>
             <ul>
@@ -100,6 +118,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Web Developer / SitusAMC</b></h5>
+          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Remote</h6>
           <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2021 - May 2022</h6>
           <p>Empowering businesses to connect with their customers with a suite of voice and messaging services.  Providing powerful tools through both simple to use APIs and a portal interface for resellers and customers.</p>
           <div>
@@ -115,6 +134,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Senior Software Engineer / Teli Communications LLC</b></h5>
+          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Centennial, CO / Remote</h6>
           <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2018 - April 2021</h6>
           <div>
             <ul>
@@ -132,6 +152,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
         <div class="w3-container">
             <h5 class="w3-opacity"><b>Senior Software Engineer / Connekt Inc.</b></h5>
+            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Denver, CO</h6>
             <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2011 - February 2018</h6>
             <p>Build rich media contextual content on TVs and second screen devices for connecting consumers with leading brands and companies.  Main responsibilities consist of both design and development for front and back-end applications on the Advanced Media Team.</p>
             <div>
@@ -152,6 +173,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
         <div class="w3-container">
             <h5 class="w3-opacity"><b>Senior Analyst/Devleoper / DISH Network</b></h5>
+            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Englewood, CO</h6>
             <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2006 - January 2010</h6>
             <p>The main designer and developer for the Customer Service Application for the Set Top Box (STB).  I worked as the server-side developer using: Java 5, WebLogic 10.3, XML, SVN, SOA, SQL, Maven.
             </p>
@@ -167,6 +189,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
         <div class="w3-container">
             <h5 class="w3-opacity"><b>Developer/Administrator / Ivy Bound</b></h5>
+            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>New York, NY / Remote</h6>
             <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>February 2006 - August 2006</h6>
             <p>Designed and developed a website for a senatorial candidate in New York, using HTML, CSS, Javascript, and PHP.
 
@@ -181,6 +204,7 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
         <div class="w3-container">
             <h5 class="w3-opacity"><b>Services Developer / BenefitsXML Inc.</b></h5>
+            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Glastonbury, CT</h6>
             <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2004 - August 2005</h6>
             <p>Developed a front-end demo portal, which connected to our web services benefits software.  Tools included;  J2EE, WebLogic, Apache, Jakarta Struts, PVCS, SQL, and XML.
             </p>
@@ -196,10 +220,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         </div>
       </div>
 
-      <div class="w3-container w3-card w3-white">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Education</h2>
+      <div class="w3-container w3-card w3-white w3-margin-bottom" id="Education">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-university fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Education</h2>
         <div class="w3-container">
           <h5 class="w3-opacity"><b>Drexel University</b></h5>
+          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Philadelphia, PA</h6>
           <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2004</h6>
           <p>Bachelor Degree</p>
           <div>
@@ -214,6 +239,15 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
         <br>
       </div>
 
+      <div class="w3-container w3-card w3-white w3-margin-bottom" id="Certificates">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Licenses & Certificates</h2>
+        <div class="w3-container">
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7f9a1ed3-b175-44ba-90fe-a15c2bb533fe" data-share-badge-host="https://www.credly.com"></div>
+          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ed12d31e-99bc-4c25-b96f-a0a10c23b28a" data-share-badge-host="https://www.credly.com"></div>
+          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+        </div>
+      </div>
+
     <!-- End Right Column -->
     </div>
     
@@ -225,8 +259,9 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 <footer class="w3-container w3-blue-gray w3-center w3-margin-top">
   <p>Find me on social media.</p>
-  <a href="https://www.facebook.com/thejdmartin/" target="_blank"><i class="fa fa-facebook-official w3-hover-opacity"></i></a>
-  <a href="https://www.linkedin.com/in/jd-martin-1136b42/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  <a href="https://www.linkedin.com/in/jd-martin-1136b42/" target="_blank"><i class="fa fa-lg fa-linkedin w3-hover-opacity"></i></a>
+  <a href="https://www.github.com/namtri" target="_blank"><i class="fa fa-lg fa-github w3-hover-opacity"></i></a>
+  <a href="https://www.facebook.com/thejdmartin/" target="_blank"><i class="fa fa-lg fa-facebook-official w3-hover-opacity"></i></a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
