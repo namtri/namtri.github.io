@@ -33,3 +33,11 @@ fetch('/components/footer.html')
   .catch(error => {
     console.error('Error loading footer:', error);
   });
+
+// add event listener for theme-toggle
+document.addEventListener('click', e => {
+  if (e.target.id === 'theme-toggle') {
+    const isDark = document.body.classList.toggle('dark');
+    try{ localStorage.setItem('site-theme', isDark ? 'dark' : 'light'); }catch(e){}
+  }
+});

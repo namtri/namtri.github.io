@@ -53,14 +53,3 @@ a#toggle-additional-projects {
 	color: #595959;
 }
 
-footer {
-	background-color: dimgray;
-}
-
-.social-links {
-	color: honeydew;
-}
-
-.social-links:hover {
-	color: khaki;
-}
