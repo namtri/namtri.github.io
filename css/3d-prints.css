@@ -28,6 +28,7 @@ div.accordion-body {
   	position: relative;
 	padding: 16px 90px;
 	background-color: dimgrey;
+	width: -webkit-fill-available;
 }
 div.work-in-progress {
   	overflow: hidden;	
