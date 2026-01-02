@@ -1,8 +1,36 @@
-<html>
-    <!-- This is currently just a placeholder for a larger index page to be created in the
-    future.  Right now all this does is redirect to my CV.
-    -->
+<!doctype html>
+<html lang="en">
     <head>
-        <script type="text/javascript">window.location.href = "./cv/index.html";</script>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Namtri — Home</title>
+        <link rel="stylesheet" href="/css/site.css" />
     </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <h1 class="site-title">JD Martin — Portfolio</h1>
+                <nav class="site-nav">
+                    <a class="nav-link" href="/cv/index.html">CV</a>
+                    <a class="nav-link" href="/3d-print-designs/index.html">3D Prints</a>
+                    <a class="nav-link" href="/cars/index.html">Cars</a>
+                    <button id="theme-toggle" class="nav-link theme-toggle" aria-label="Toggle dark mode">🌙</button>
+                </nav>
+            </div>
+        </header>
+
+        <main class="hero container">
+            <p class="lead">Software engineer & maker. Welcome — this site contains my CV, projects, and 3D print designs.</p>
+            <div class="buttons">
+                <a class="btn" href="/cv/index.html">View CV</a>
+                <a class="btn btn-outline" href="/3d-print-designs/index.html">View 3D Prints</a>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">© JD Martin</div>
+        </footer>
+
+        <script src="/js/site.js"></script>
+    </body>
 </html>

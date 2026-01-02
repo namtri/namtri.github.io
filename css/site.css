@@ -1,0 +1,114 @@
+/* Basic shared site stylesheet for homepage and future unified styling */
+:root{
+  --bg: #f6f7f9;
+  --accent: #2b6cb0;
+  --muted: #666;
+  --card-bg: #ffffff;
+  --text-color: #222;
+  --radius: 8px;
+  --max-width: 980px;
+}
+/* Dark theme overrides are applied by adding `dark` class to <body> */
+.dark{
+  --bg: #0f1720;
+  --accent: #60a5fa;
+  --muted: #9fb5d6;
+  --card-bg: #0b1220;
+  --text-color: #dbeafe;
+}
+html,body{height:100%;margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial}
+.site-toggle-hidden{display:none}
+body{background:var(--bg);color:var(--text-color);display:flex;flex-direction:column}
+.container{width:90%;max-width:var(--max-width);margin:0 auto}
+.site-header{background:var(--card-bg);border-bottom:1px solid rgba(0,0,0,0.06)}
+.site-header .container{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.site-title{margin:0;font-size:20px}
+.site-nav{display:flex;gap:12px;align-items:center}
+.site-nav .nav-link{margin-left:0;text-decoration:none;color:var(--muted);font-weight:600;background:transparent;border:none}
+.site-nav .nav-link:hover{color:var(--accent)}
+.theme-toggle{cursor:pointer;border-radius:6px;padding:6px 8px}
+.theme-toggle:hover{background:rgba(0,0,0,0.04)}
+
+/* small utility from previous W3 hover effect */
+.hover-opacity{transition:opacity .15s ease}
+.hover-opacity:hover{opacity:0.7}
+.hero{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px 0;text-align:center}
+.lead{font-size:1.05rem;color:var(--muted);max-width:720px}
+.buttons{margin-top:18px}
+.btn{display:inline-block;padding:10px 16px;margin:0 8px;background:var(--accent);color:white;text-decoration:none;border-radius:6px}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.site-footer{padding:18px 0;text-align:center;color:var(--muted);font-size:0.9rem;border-top:1px solid rgba(0,0,0,0.06);background:transparent}
+
+/* make sure components read the CSS vars for background */
+.site-header{background:var(--card-bg);border-bottom:1px solid rgba(0,0,0,0.06)}
+
+/* --- W3.CSS harmony overrides (for `cv/index.html`) --- */
+/* Keep layout provided by W3, but align colors/spacing with site vars */
+/* .w3-light-grey{background:var(--bg) !important}
+.w3-content{max-width:var(--max-width) !important;margin-top:1rem !important}
+.w3-container{padding:16px !important}
+.w3-card-4, .w3-card, .w3-white{background:var(--card-bg) !important;color:var(--text-color) !important;border-radius:var(--radius) !important;box-shadow:0 6px 18px rgba(2,6,23,0.06) !important}
+.w3-text-grey{color:var(--muted) !important}
+.w3-text-blue-gray{color:var(--accent) !important}
+.w3-margin-top{margin-top:1rem !important}
+.w3-row-padding{gap:1rem;display:flex;flex-wrap:wrap}
+.w3-third{flex:1 1 30%;min-width:260px} */
+
+/* Dark theme adjustments for W3 classes */
+/* .dark .w3-card-4, .dark .w3-card, .dark .w3-white{background:var(--card-bg) !important;color:var(--text-color) !important;border-color:rgba(255,255,255,0.03) !important}
+.dark .w3-text-grey{color:var(--muted) !important}
+.dark .w3-text-blue-gray{color:var(--accent) !important} */
+
+/* --- CV specific layout & components --- */
+.cv-content{max-width:1400px;margin:1.25rem auto;padding:0 12px}
+.site-grid{display:flex;gap:24px;align-items:flex-start}
+.left-col{flex:0 0 32%;min-width:240px}
+.right-col{flex:1}
+.profile-card{overflow:hidden;border-radius:12px}
+.display-container{position:relative}
+.display-container img{width:100%;display:block}
+.display-bottomleft{position:absolute;left:12px;bottom:12px}
+.overlay h2{margin:0;color:var(--text-color)}
+.card-body{padding:16px;background:transparent}
+.site-card{background:var(--card-bg);border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06);overflow:hidden}
+.muted{color:var(--muted)}
+.icon{margin-right:8px;font-size:1.05rem;color:var(--accent)}
+.skill-bar{background:rgba(0,0,0,0.06);border-radius:999px;height:14px;overflow:hidden}
+.skill-fill{display:block;height:100%;background:var(--accent);border-radius:999px}
+.section-title{font-size:1.25rem;margin:0 0 12px 0;color:var(--muted)}
+.mb{margin-bottom:1rem}
+
+@media (max-width:900px){
+  .site-grid{flex-direction:column}
+  .left-col{flex:1}
+}
+
+/* Polished CV visuals */
+.cv-content{padding-top:20px;padding-bottom:36px}
+.left-col .site-card{overflow:hidden}
+.display-bottomleft{right:auto;left:12px;bottom:12px}
+.display-bottomleft h2{background:rgba(0,0,0,0.45);color:white;padding:6px 10px;border-radius:6px}
+.card-body p{margin:6px 0}
+.site-card .section-title{font-size:1.1rem;color:var(--muted);margin-bottom:10px}
+.site-card h5{margin:0 0 6px 0}
+.site-card ul{margin:8px 0 0 1.1rem;padding:0}
+.site-card li{margin:6px 0;line-height:1.35}
+.site-card hr{border:0;border-top:1px solid rgba(0,0,0,0.06);margin:12px 0}
+.muted{color:var(--muted)}
+.profile-card .card-body a{color:var(--accent);text-decoration:none}
+.profile-card .card-body a:hover{text-decoration:underline}
+.skill-bar{margin:6px 0 12px}
+
+/* Right column tweaks */
+.right-col{gap:18px}
+.right-col .site-card{margin-bottom:14px}
+
+/* Ensure accessibility: focus states for nav links */
+.site-nav .nav-link:focus{outline:2px solid rgba(43,108,176,0.25);outline-offset:3px}
+
+
+/* small screens */
+@media (max-width:600px){
+  .site-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:8px}
+  .site-title{padding:16px 0;text-align:center}
+}

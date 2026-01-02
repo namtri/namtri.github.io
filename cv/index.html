@@ -4,9 +4,10 @@
 <title>CV | JD Martin</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- removed W3.CSS to unify site styles -->
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/site.css">
 <style>
 html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
@@ -19,92 +20,81 @@ footer {
   bottom: 0px;
   width: 100%;
 }
-
-@media screen and (min-width: 600px) {
-  #rightCol {
-    height: 99vh;
-    position: sticky;
-    top: 0px;
-    overflow-y: auto;
-    scrollbar-width: none;
-  }
-}
 </style>
 </head>
-<body class="w3-light-grey">
+<body>
+
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title">JD Martin — CV</h1>
+        <nav class="site-nav">
+          <a class="nav-link" href="/">Home</a>
+          <a class="nav-link" href="/cv/index.html">CV</a>
+          <a class="nav-link" href="/3d-print-designs/index.html">3D Prints</a>
+          <a class="nav-link" href="/cars/index.html">Cars</a>
+          <button id="theme-toggle" class="nav-link theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+      </div>
+    </header>
 
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="cv-content">
 
   <!-- The Grid -->
-  <div class="w3-row-padding" style="height: auto;">
+  <div class="site-grid">
   
     <!-- Left Column -->
-    <div class="w3-third" id="leftCol">
-    
-      <div class="w3-white w3-text-grey w3-card-4">
-        <div class="w3-display-container">
-          <img src="../media/cover-image.webp" style="width:100%" alt="Avatar">
-          <div class="w3-display-bottomleft w3-container w3-text-black">
-            <h2 class="w3-text-white shadow">JD Martin</h2>
+    <aside class="left-col" id="leftCol">
+
+      <div class="site-card profile-card">
+        <div class="display-container">
+          <img src="../media/cover-image.webp" alt="Avatar">
+          <div class="display-bottomleft overlay">
+            <h2 class="shadow">JD Martin</h2>
           </div>
         </div>
-        <div class="w3-container">
-          <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>Software Engineer</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>Golden, CO</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>namtri@gmail.com</p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-blue-gray"></i>303-513-7389</p>
+        <div class="card-body">
+          <p><i class="fa fa-briefcase icon" aria-hidden="true"></i>Software Engineer</p>
+          <p><i class="fa fa-home icon" aria-hidden="true"></i>Golden, CO</p>
+          <p><i class="fa fa-envelope icon" aria-hidden="true"></i>namtri@gmail.com</p>
+          <p><i class="fa fa-phone icon" aria-hidden="true"></i>303-513-7389</p>
           <hr>
 
-          <p><i class="fa fa-download fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a download href="../media/resume_jd_martin.pdf" class="w3-hover-light-green">PDF Resume</a></p>
-          <p><i class="fa fa-linkedin fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a href="https://www.linkedin.com/in/jd-martin-1136b42/" target="_blank">LinkedIn Profile</a></p>
-          <p><i class="fa fa-university fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a href="#Education">Education</a></p>
-          <p><i class="fa fa-certificate fa-fw w3-margin-right w3-large w3-text-blue-gray"></i><a href="#Certificates">Licenses & Certificates</a></p>
+          <p><i class="fa fa-download icon" aria-hidden="true"></i><a download href="../media/resume_jd_martin.pdf">PDF Resume</a></p>
+          <p><i class="fa fa-linkedin icon" aria-hidden="true"></i><a href="https://www.linkedin.com/in/jd-martin-1136b42/" target="_blank">LinkedIn Profile</a></p>
+          <p><i class="fa fa-university icon" aria-hidden="true"></i><a href="#Education">Education</a></p>
+          <p><i class="fa fa-certificate icon" aria-hidden="true"></i><a href="#Certificates">Licenses & Certificates</a></p>
           <hr>
 
-          <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-blue-gray"></i>Current Proficiencies</b></p>
+          <p class="section-title"><b><i class="fa fa-asterisk icon" aria-hidden="true"></i>Current Proficiencies</b></p>
           <p>PHP</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width:90%">Proficient</div>
-          </div>
+          <div class="skill-bar"><span class="skill-fill" style="width:90%"></span></div>
           <p>LAMP</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width:70%">Proficient</div>
-          </div>
+          <div class="skill-bar"><span class="skill-fill" style="width:70%"></span></div>
           <p>Javascript</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width:50%">Journeyman</div>
-          </div>
+          <div class="skill-bar"><span class="skill-fill" style="width:50%"></span></div>
           <p>jQuery</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width:50%">Journeyman</div>
-          </div>
+          <div class="skill-bar"><span class="skill-fill" style="width:50%"></span></div>
           <p>SQL/MySQL</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width:70%">Proficient</div>
-          </div>
+          <div class="skill-bar"><span class="skill-fill" style="width:70%"></span></div>
           <p>React/Redux</p>
-          <div class="w3-light-grey w3-round-xlarge w3-small">
-            <div class="w3-container w3-center w3-round-xlarge w3-blue-gray" style="width:50%">Journeyman</div>
-          </div>
+          <div class="skill-bar"><span class="skill-fill" style="width:50%"></span></div>
 
-          <br>
         </div>
-      </div><br>
+      </div>
 
     <!-- End Left Column -->
-    </div>
+    </aside>
 
     <!-- Right Column -->
-    <div class="w3-twothird"  id="rightCol">
-    
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Work Experience</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Data Conversion Specialist / Roswell Park Comprehensive Cancer Center</b></h5>
-          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Buffalo, NY / Remote</h6>
-          <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>September 2022 - September 2024</h6>
+    <main class="right-col" id="rightCol">
+
+      <section class="site-card mb">
+        <div class="card-body">
+          <h2 class="section-title"><i class="fa fa-suitcase icon" aria-hidden="true"></i>Work Experience</h2>
           <div>
+            <h5><b>Data Conversion Specialist / Roswell Park Comprehensive Cancer Center</b></h5>
+            <p class="muted"><i class="fa fa-map-pin icon" aria-hidden="true"></i>Buffalo, NY / Remote &nbsp; <i class="fa fa-calendar icon" aria-hidden="true"></i>September 2022 - September 2024</p>
             <ul>
                 <li>Designed and Developed a process for converting Roswell Parks’ patient records to a new platform using PHP.</li>
                 <li>Used a chain of responsibility pattern with full data redundancy across the entire process to improve data tracking through the conversion.</li>
@@ -114,30 +104,29 @@ footer {
                 <li>Participating in the mock and incremental launches lend my expertise to the full dataset.</li>
             </ul>
           </div>
-          <hr>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Web Developer / SitusAMC</b></h5>
-          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Remote</h6>
-          <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2021 - May 2022</h6>
+      </section>
+
+      <section class="site-card mb">
+        <div class="card-body">
+          <h5><b>Web Developer / SitusAMC</b></h5>
+          <p class="muted"><i class="fa fa-map-pin icon" aria-hidden="true"></i>Remote &nbsp; <i class="fa fa-calendar icon" aria-hidden="true"></i>June 2021 - May 2022</p>
           <p>Empowering businesses to connect with their customers with a suite of voice and messaging services.  Providing powerful tools through both simple to use APIs and a portal interface for resellers and customers.</p>
-          <div>
-              <ul>
+          <ul>
                 <li>Working as a cross-platform teammate responsible for building proficiency in multiple applications to relieve project overflow.</li>
                 <li>Converting the front-end Javascript application pages to a new home-grown system.</li>
                 <li>Cross-training on a full stack application developed on the LAMP stack (Linux, Apache, MySQL, PHP).</li>
                 <li>Designing and implementing rules in SQL as specified by the client.</li>
                 <li>Work with testers, release managers, and owners on 3-week software release sprints.</li>
-              </ul>
-          </div>
-          <hr>
+          </ul>
         </div>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Senior Software Engineer / Teli Communications LLC</b></h5>
-          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Centennial, CO / Remote</h6>
-          <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>July 2018 - April 2021</h6>
-          <div>
-            <ul>
+      </section>
+
+      <section class="site-card mb">
+        <div class="card-body">
+          <h5><b>Senior Software Engineer / Teli Communications LLC</b></h5>
+          <p class="muted"><i class="fa fa-map-pin icon" aria-hidden="true"></i>Centennial, CO / Remote &nbsp; <i class="fa fa-calendar icon" aria-hidden="true"></i>July 2018 - April 2021</p>
+          <ul>
                 <li>Develop and maintain API and Portal environments using HTML/Javascript/PHP, jQuery, Fat Free Framework and AWS.</li>
                 <li>As team lead, performed the research, design and development of a CRM module for the telecom industry.</li>
                 <li>Worked with the Romanian team to develop the front-end logic to build a message campaign registration system into Teli’s portal.</li>
@@ -146,38 +135,15 @@ footer {
                 <li>Took ownership of Customer Support System and Local Number Portability enhancements.</li>
                 <li>Develop and maintain procedural automated scripts.</li>
                 <li>Mentored a junior software engineer, who works remotely in Romania, to develop a new ticket tracking system.</li>
-            </ul>
-          </div>
-          <hr>
+          </ul>
         </div>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Senior Software Engineer / Connekt Inc.</b></h5>
-            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Denver, CO</h6>
-            <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2011 - February 2018</h6>
-            <p>Build rich media contextual content on TVs and second screen devices for connecting consumers with leading brands and companies.  Main responsibilities consist of both design and development for front and back-end applications on the Advanced Media Team.</p>
-            <div>
-                <ul>
-                    <li>Successfully worked within a team of five developers to build a new modular application and Content Management System (CMS) using Google Cloud Platform (GCP), Python, ReactJS and Material-UI.</li>
-                    <li>Lead the design and development of building campaigns with comprehensive, full flow event tracking using Google Analytics and Rebrandly along with a custom tracking pixel to capture SMS clicks.</li>
-                    <li>Worked with a team to develop a next generation REST and Web Service API platform for iTV and third-party integration including Samsung, LG, Comcast, Sony and Roku platforms using PHP in a LAMP stack.</li>
-                    <li>Developed a series of modules, services, and libraries in a loosely coupled, highly cohesive manner to facilitate data transactions within the Delivery Agent engine or third-party APIs in PHP.</li>
-                    <li>Completed a multi-platform unification project with the expressed goal of merging Delivery Agent’s PHP based Order Management System with Music Today’s CMS.</li>
-                    <li>Integrating multiple third-party vendor SDKs, including Amazon Pay, Avalara, CDyne, Zend, and Doctrine.</li>
-                    <li>Extended in-house database object to support query builder functionality in PHP.</li>
-                    <li>A Facebook management module was integrated into the company's homegrown CMS.</li>
-                    <li>Collaboratively worked with the project team on several advertising campaigns for live and recorded television events, including the Superbowl and Survivor’s 35th anniversary.</li>
-                    <li>Lead and delivered the final stage of a CES 2011 demo in partnership with Intel and Discovery.</li>
-                </ul>
-            </div>
-          <hr>
-        </div>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Senior Analyst/Devleoper / DISH Network</b></h5>
-            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Englewood, CO</h6>
-            <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2006 - January 2010</h6>
-            <p>The main designer and developer for the Customer Service Application for the Set Top Box (STB).  I worked as the server-side developer using: Java 5, WebLogic 10.3, XML, SVN, SOA, SQL, Maven.
-            </p>
-            <div>
+      </section>
+
+        <section class="site-card mb">
+            <div class="card-body">
+                <h5><b>Senior Analyst/Developer / DISH Network</b></h5>
+                <p class="muted"><i class="fa fa-map-pin icon" aria-hidden="true"></i>Englewood, CO &nbsp; <i class="fa fa-calendar icon" aria-hidden="true"></i>August 2006 - January 2010</p>
+                <p>The main designer and developer for the Customer Service Application for the Set Top Box (STB).  I worked as the server-side developer using: Java 5, WebLogic 10.3, XML, SVN, SOA, SQL, Maven.</p>
                 <ul>
                     <li>Developed server code to connect with 25 million STBs consisting of over 30 different models.</li>
                     <li>Led the creation and maintenance of technical and interface documentation for the IT and Engineering groups.</li>
@@ -185,30 +151,25 @@ footer {
                     <li>Successfully completed additional projects involving legacy applications which needed to be brought into a modern environment.  My ability to read, understand and enhance other developers' code was essential to successfully deliver this goal.</li>
                 </ul>
             </div>
-          <hr>
-        </div>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Developer/Administrator / Ivy Bound</b></h5>
-            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>New York, NY / Remote</h6>
-            <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>February 2006 - August 2006</h6>
-            <p>Designed and developed a website for a senatorial candidate in New York, using HTML, CSS, Javascript, and PHP.
+        </section>
 
-            </p>
-            <div>
+        <section class="site-card mb">
+            <div class="card-body">
+                <h5><b>Developer/Administrator / Ivy Bound</b></h5>
+                <p class="muted"><i class="fa fa-map-pin icon" aria-hidden="true"></i>New York, NY / Remote &nbsp; <i class="fa fa-calendar icon" aria-hidden="true"></i>February 2006 - August 2006</p>
+                <p>Designed and developed a website for a senatorial candidate in New York, using HTML, CSS, Javascript, and PHP.</p>
                 <ul>
                     <li>Wrote an email form using PHP and administered a dozen email accounts for campaign assistants.</li>
                     <li>Performed image work performed in Adobe Photoshop 6.</li>
                 </ul>
             </div>
-          <hr>
-        </div>
-        <div class="w3-container">
-            <h5 class="w3-opacity"><b>Services Developer / BenefitsXML Inc.</b></h5>
-            <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Glastonbury, CT</h6>
-            <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>August 2004 - August 2005</h6>
-            <p>Developed a front-end demo portal, which connected to our web services benefits software.  Tools included;  J2EE, WebLogic, Apache, Jakarta Struts, PVCS, SQL, and XML.
-            </p>
-            <div>
+        </section>
+
+        <section class="site-card mb">
+            <div class="card-body">
+                <h5><b>Services Developer / BenefitsXML Inc.</b></h5>
+                <p class="muted"><i class="fa fa-map-pin icon" aria-hidden="true"></i>Glastonbury, CT &nbsp; <i class="fa fa-calendar icon" aria-hidden="true"></i>August 2004 - August 2005</p>
+                <p>Developed a front-end demo portal, which connected to our web services benefits software.  Tools included;  J2EE, WebLogic, Apache, Jakarta Struts, PVCS, SQL, and XML.</p>
                 <ul>
                     <li>Transformed a Java Server Page portal to a new Struts based portal, with a focus on expandability through the use of Tiles.</li>
                     <li>Extended Struts based Java classes to fit the needs of the benefits administration world.</li>
@@ -216,44 +177,44 @@ footer {
                     <li>Enhanced the unit regression test suite for our customers' user interface.</li>
                 </ul>
             </div>
-          <hr>
-        </div>
+        </section>
+
       </div>
 
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="Education">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-university fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Education</h2>
-        <div class="w3-container">
-          <h5 class="w3-opacity"><b>Drexel University</b></h5>
-          <h6 class="w3-text-gray"><i class="fa fa-map-pin fa-fw w3-margin-right"></i>Philadelphia, PA</h6>
-          <h6 class="w3-text-blue-gray"><i class="fa fa-calendar fa-fw w3-margin-right"></i>June 2004</h6>
-          <p>Bachelor of Science in Computer Science</p>
+      <section id="Education" class="site-card mb">
+        <div class="card-body">
+          <h2 class="section-title"><i class="fa fa-university icon" aria-hidden="true"></i>Education</h2>
           <div>
-            <h6 class="w3-opacity">Focused Curriculum</h6>
+            <h5><b>Drexel University</b></h5>
+            <p class="muted"><i class="fa fa-map-pin icon" aria-hidden="true"></i>Philadelphia, PA &nbsp; <i class="fa fa-calendar icon" aria-hidden="true"></i>June 2004</p>
+            <p>Bachelor of Science in Computer Science</p>
+            <h6 class="muted">Focused Curriculum</h6>
             <ul>
-                <li>Artificial Intelligence <span class="w3-small">(AI using LISP, Advanced AI using C++, Robot Building Lab using C)</span></li>
-                <li>Human Computer Interaction <span class="w3-small">(HCI, GUI using Java, Computer Graphics)</span></li>
-                <li>Operating Systems <span class="w3-small">(OS, Concurrent Programming using Java, Networks using C++)</span></li>
+                <li>Artificial Intelligence <small class="muted">(AI using LISP, Advanced AI using C++, Robot Building Lab using C)</small></li>
+                <li>Human Computer Interaction <small class="muted">(HCI, GUI using Java, Computer Graphics)</small></li>
+                <li>Operating Systems <small class="muted">(OS, Concurrent Programming using Java, Networks using C++)</small></li>
             </ul>
           </div>
         </div>
-        <br>
-      </div>
+      </section>
 
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="Certificates">
-        <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-blue-gray"></i>Licenses & Certificates</h2>
-        <div class="w3-container">
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7f9a1ed3-b175-44ba-90fe-a15c2bb533fe" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ed12d31e-99bc-4c25-b96f-a0a10c23b28a" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7823d303-12a3-471a-80c6-c0c215f5180d" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="3c69104d-9538-4f28-86dc-4f2cf8a9fa1b" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6aa58cf1-347d-412d-a89c-4e6cb6ba11d6" data-share-badge-host="https://www.credly.com"></div>
-          <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8a31668a-2644-4968-a496-2dec9915ee73" data-share-badge-host="https://www.credly.com"></div>
-          <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+      <section id="Certificates" class="site-card mb">
+        <div class="card-body">
+          <h2 class="section-title"><i class="fa fa-certificate icon" aria-hidden="true"></i>Licenses & Certificates</h2>
+          <div>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7f9a1ed3-b175-44ba-90fe-a15c2bb533fe" data-share-badge-host="https://www.credly.com"></div>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="ed12d31e-99bc-4c25-b96f-a0a10c23b28a" data-share-badge-host="https://www.credly.com"></div>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7823d303-12a3-471a-80c6-c0c215f5180d" data-share-badge-host="https://www.credly.com"></div>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="3c69104d-9538-4f28-86dc-4f2cf8a9fa1b" data-share-badge-host="https://www.credly.com"></div>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="6aa58cf1-347d-412d-a89c-4e6cb6ba11d6" data-share-badge-host="https://www.credly.com"></div>
+            <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="8a31668a-2644-4968-a496-2dec9915ee73" data-share-badge-host="https://www.credly.com"></div>
+            <script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
+          </div>
         </div>
-      </div>
+      </section>
 
     <!-- End Right Column -->
-    </div>
+    </main>
     
   <!-- End Grid -->
   </div>
@@ -261,12 +222,13 @@ footer {
   <!-- End Page Container -->
 </div>
 
-<footer class="w3-container w3-blue-gray w3-center w3-margin-top">
+<footer class="site-footer">
   <p>Find me on social media.</p>
-  <a href="https://www.linkedin.com/in/jd-martin-1136b42/" target="_blank"><i class="fa fa-lg fa-linkedin w3-hover-opacity"></i></a>
-  <a href="https://www.github.com/namtri" target="_blank"><i class="fa fa-lg fa-github w3-hover-opacity"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  <a href="https://www.linkedin.com/in/jd-martin-1136b42/" target="_blank"><i class="fa fa-lg fa-linkedin"></i></a>
+  <a href="https://www.github.com/namtri" target="_blank"><i class="fa fa-lg fa-github"></i></a>
 </footer>
+
+  <script src="/js/site.js"></script>
 
 </body>
 </html>
