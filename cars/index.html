@@ -9,30 +9,31 @@
     <link rel="stylesheet" href="/css/site.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <h1 class="site-title">JD Martin — Portfolio</h1>
-        <nav class="site-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/cv/index.html">CV</a>
-          <a class="nav-link" href="/3d-print-designs/index.html">3D Prints</a>
-          <a class="nav-link" href="/cars/index.html">Cars</a>
-          <button id="theme-toggle" class="nav-link theme-toggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-      </div>
-    </header>
+    <div id="header-placeholder"></div>
+    <script src="/js/fragments.js"></script>
+    <script>
+      loadFragment({
+        url: '/components/header.html',
+        targetId: 'header-placeholder',
+        tokens: { HEADER: 'Cars & Builds' }
+      });
+    </script>
 
     <main class="container py-4">
       <h2 class="mb-4">Fleet and Projects</h2>
 
       <section class="mb-5">
-        <h3>Mazda RX-7 (FD)</h3>
-        <p>Current restoration and interior trim projects. Focus areas: shifter collar, emergency brake trim, switch retaining ring.</p>
-        <ul>
-          <li>Shifter centering collar — CAD + test prints</li>
-          <li>Emergency brake boot bracket — design iteration and test fit</li>
-          <li>Mirror switch retaining clip — small injection-mold style clip</li>
-        </ul>
+        <div class="card my-4">
+          <div class="card-body px-4">
+            <h2 class="card-title">Mazda RX-7 (FD)</h2>
+            <p>Current restoration and interior trim projects. Focus areas: shifter collar, emergency brake trim, switch retaining ring.</p>
+            <ul>
+              <li>Shifter centering collar — CAD + test prints</li>
+              <li>Emergency brake boot bracket — design iteration and test fit</li>
+              <li>Mirror switch retaining clip — small injection-mold style clip</li>
+            </ul>
+          </div>
+        </div>
 
         <div id="carousel-rx7" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -58,12 +59,16 @@
       </section>
 
       <section class="mb-5">
-        <h3>Jaguar E-Type</h3>
-        <p>Visor bracket redesign and test fits.</p>
-        <ul>
-          <li>Visor bracket CAD model and test fits</li>
-          <li>Iterate acrylic/polycarbonate visor mounting</li>
-        </ul>
+        <div class="card my-4">
+          <div class="card-body px-4">
+            <h2 class="card-title">Jaguar E-Type</h2>
+            <p>Visor bracket redesign and test fits.</p>
+            <ul>
+              <li>Visor bracket CAD model and test fits</li>
+              <li>Iterate acrylic/polycarbonate visor mounting</li>
+            </ul>
+          </div>
+        </div>
 
         <div id="carousel-jaguar" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner">
@@ -86,8 +91,12 @@
       </section>
 
       <section>
-        <h3>Other Projects</h3>
-        <p>Small fabrication and mounting projects across the fleet. See the 3D prints page for CAD files and galleries.</p>
+        <div class="card my-4">
+          <div class="card-body px-4">
+            <h2 class="card-title">Other Projects</h2>
+            <p>Small fabrication and mounting projects across the fleet. See the 3D prints page for CAD files and galleries.</p>
+          </div>
+        </div>
       </section>
     </main>
 

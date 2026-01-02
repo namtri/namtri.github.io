@@ -9,7 +9,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/css/site.css">
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
 
 .shadow {
   text-shadow: -2px 2px 6px #214567;
@@ -24,18 +23,17 @@ footer {
 </head>
 <body>
 
-    <header class="site-header">
-      <div class="container">
-        <h1 class="site-title">JD Martin — CV</h1>
-        <nav class="site-nav">
-          <a class="nav-link" href="/">Home</a>
-          <a class="nav-link" href="/cv/index.html">CV</a>
-          <a class="nav-link" href="/3d-print-designs/index.html">3D Prints</a>
-          <a class="nav-link" href="/cars/index.html">Cars</a>
-          <button id="theme-toggle" class="nav-link theme-toggle" aria-label="Toggle dark mode">🌙</button>
-        </nav>
-      </div>
-    </header>
+  <div id="header-placeholder"></div>
+  <script src="/js/fragments.js"></script>
+  <script>
+    loadFragment({
+      url: '/components/header.html',
+      targetId: 'header-placeholder',
+      tokens: {
+        HEADER: 'JD Martin — CV'
+      }
+    });
+  </script>
 
 <!-- Page Container -->
 <div class="cv-content">
