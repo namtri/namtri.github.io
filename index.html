@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
@@ -9,16 +9,6 @@
     </head>
     <body>
         <div id="header-placeholder"></div>
-        <script src="/js/fragments.js"></script>
-        <script>
-            loadFragment({
-                url: '/components/header.html',
-                targetId: 'header-placeholder',
-                tokens: {
-                    HEADER: 'JD Martin — Portfolio'
-                }
-            });
-        </script>
 
         <main class="hero container">
             <p class="lead">Software engineer & maker. Welcome — this site contains my CV, projects, and 3D print designs.</p>
@@ -30,6 +20,17 @@
 
 		<div id="footer-placeholder"></div>
 
+        <script src="/js/fragments.js"></script>
+        <script>
+            loadFragment({
+                url: '/components/header.html',
+                targetId: 'header-placeholder',
+                tokens: {
+                    HEADER: 'JD Martin — Portfolio'
+                }
+            });
+        </script>
         <script src="/js/site.js"></script>
+        
     </body>
 </html>

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>3D Prints and Designs</title>
@@ -7,30 +8,19 @@
 		<link rel="stylesheet" href="/css/site.css"/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>		
 		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 		<script src="/js/3d-prints.js" type="module"></script>
 	</head>
 	<body>
 		<div id="header-placeholder"></div>
-		<script src="/js/fragments.js"></script>
-		<script>
-			loadFragment({
-				url: '/components/header.html',
-				targetId: 'header-placeholder',
-				tokens: {
-					HEADER: '3D Prints and Designs'
-				}
-			});
-		</script>
 		
-		<main class="container py-4">
+		<main class="hero container py-4">
 			<div class="align-items-center">
 				<div class="card my-4">
 					<div class="card-body px-4">
 						<h2 class="card-title">3D Prints and Designs</h2>
-						<p class="card-text">I've been developing tools and other objects to solve problems around the house.  The program I've been using for design is <a href="https://openscad.org" target="_balnk">OpenSCAD</a> for it's simple interface and extensive library of plugins.</p>
+						<p class="card-text">I've been developing tools and other objects to solve problems around the house.  The program I've been using for design is <a href="https://openscad.org" target="_blank">OpenSCAD</a> for it's simple interface and extensive library of plugins.</p>
 					</div>
 				</div>
 
@@ -225,6 +215,16 @@
 		
 		<div id="footer-placeholder"></div>
 		
+		<script src="/js/fragments.js"></script>
+		<script>
+			loadFragment({
+				url: '/components/header.html',
+				targetId: 'header-placeholder',
+				tokens: {
+					HEADER: '3D Prints and Designs'
+				}
+			});
+		</script>
 		<script src="/js/site.js"></script>
 	</body>
 </html>

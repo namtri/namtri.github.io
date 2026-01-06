@@ -42,23 +42,6 @@ body{background:var(--bg);color:var(--text-color);display:flex;flex-direction:co
 /* make sure components read the CSS vars for background */
 .site-header{background:var(--card-bg);border-bottom:1px solid rgba(0,0,0,0.06)}
 
-/* --- W3.CSS harmony overrides (for `cv/index.html`) --- */
-/* Keep layout provided by W3, but align colors/spacing with site vars */
-/* .w3-light-grey{background:var(--bg) !important}
-.w3-content{max-width:var(--max-width) !important;margin-top:1rem !important}
-.w3-container{padding:16px !important}
-.w3-card-4, .w3-card, .w3-white{background:var(--card-bg) !important;color:var(--text-color) !important;border-radius:var(--radius) !important;box-shadow:0 6px 18px rgba(2,6,23,0.06) !important}
-.w3-text-grey{color:var(--muted) !important}
-.w3-text-blue-gray{color:var(--accent) !important}
-.w3-margin-top{margin-top:1rem !important}
-.w3-row-padding{gap:1rem;display:flex;flex-wrap:wrap}
-.w3-third{flex:1 1 30%;min-width:260px} */
-
-/* Dark theme adjustments for W3 classes */
-/* .dark .w3-card-4, .dark .w3-card, .dark .w3-white{background:var(--card-bg) !important;color:var(--text-color) !important;border-color:rgba(255,255,255,0.03) !important}
-.dark .w3-text-grey{color:var(--muted) !important}
-.dark .w3-text-blue-gray{color:var(--accent) !important} */
-
 /* --- CV specific layout & components --- */
 .cv-content{max-width:1400px;margin:1.25rem auto;padding:0 12px}
 .site-grid{display:flex;gap:24px;align-items:flex-start}
