@@ -1,8 +1,7 @@
 // Shared site JS: theme toggle and persistence
 (function(){
   const body = document.body;
-  const toggle = document.getElementById('theme-toggle');
-  
+
   const applyStored = () => {
     try{
       const stored = localStorage.getItem('site-theme');
@@ -10,21 +9,26 @@
       else body.classList.remove('dark');
     }catch(e){ /* ignore storage errors */ }
   };
-  
+
   const setIcon = () => {
+    const toggle = document.getElementById('theme-toggle');
     if(!toggle) return;
     toggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
   };
-  
+
   applyStored();
   setIcon();
-  
-  if(toggle){
-    toggle.addEventListener('click', ()=>{
-      const isDark = body.classList.toggle('dark');
-      try{ localStorage.setItem('site-theme', isDark ? 'dark' : 'light'); }catch(e){}
-      setIcon();
+
+  // If the header fragment (with the theme-toggle) is inserted after this script runs,
+  // observe the DOM and update the icon when the element appears.
+  if(!document.getElementById('theme-toggle')){
+    const obs = new MutationObserver((mutations, observer) => {
+      if(document.getElementById('theme-toggle')){
+        setIcon();
+        observer.disconnect();
+      }
     });
+    obs.observe(document.body, { childList: true, subtree: true });
   }
 })();
 
@@ -40,7 +44,7 @@ fetch('/components/footer.html')
 
 // add event listener for theme-toggle
 document.addEventListener('click', e => {
-  if (e.target.id === 'theme-toggle') {
+  if (e.target && e.target.id === 'theme-toggle') {
     const isDark = document.body.classList.toggle('dark');
     try{ localStorage.setItem('site-theme', isDark ? 'dark' : 'light'); }catch(e){}
     e.target.textContent = isDark ? '☀️' : '🌙';
