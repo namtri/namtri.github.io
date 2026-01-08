@@ -28,6 +28,7 @@ body{background:var(--bg);color:var(--text-color);display:flex;flex-direction:co
 .site-nav .nav-link:hover{color:var(--accent)}
 .theme-toggle{cursor:pointer;border-radius:6px;padding:6px 8px}
 .theme-toggle:hover{background:rgba(0,0,0,0.04)}
+.theme-toggle-icon{pointer-events: none;}
 
 /* small utility from previous W3 hover effect */
 .hover-opacity{transition:opacity .15s ease}

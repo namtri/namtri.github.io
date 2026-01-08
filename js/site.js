@@ -13,7 +13,13 @@
   const setIcon = () => {
     const toggle = document.getElementById('theme-toggle');
     if(!toggle) return;
-    toggle.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+    if (body.classList.contains('dark')) {
+      $('#theme-toggle-icon').removeClass('fa-moon-o');
+      $('#theme-toggle-icon').addClass('fa-sun-o');
+    } else {
+      $('#theme-toggle-icon').removeClass('fa-sun-o');
+      $('#theme-toggle-icon').addClass('fa-moon-o');
+    }
   };
 
   applyStored();
@@ -47,6 +53,13 @@ document.addEventListener('click', e => {
   if (e.target && e.target.id === 'theme-toggle') {
     const isDark = document.body.classList.toggle('dark');
     try{ localStorage.setItem('site-theme', isDark ? 'dark' : 'light'); }catch(e){}
-    e.target.textContent = isDark ? '☀️' : '🌙';
+    if (isDark) {
+      $('#theme-toggle-icon').removeClass('fa-moon-o');
+      $('#theme-toggle-icon').addClass('fa-sun-o');
+    } else {
+      $('#theme-toggle-icon').removeClass('fa-sun-o');
+      $('#theme-toggle-icon').addClass('fa-moon-o');
+    }
+
   }
 });
