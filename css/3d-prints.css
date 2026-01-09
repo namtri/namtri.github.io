@@ -49,7 +49,4 @@ div.work-in-progress:before {
     font-weight: 600;
 }
 
-a#toggle-additional-projects {
-	color: #182431;
-}
-
+a#toggle-additional-projects{color:var(--card-bg);text-decoration: none;cursor:pointer}
