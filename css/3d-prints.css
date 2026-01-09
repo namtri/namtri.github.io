@@ -19,14 +19,14 @@
 
 .gallery-item {
 	display: inline-flex;
-	width: 200px;
-	padding: 5px;
+	width: 12.5rem;
+	padding: 0.3125rem;
 }
 
 div.accordion-body {
 	display: inline-block;
   	position: relative;
-	padding: 16px 90px;
+	padding: 1rem 5.625rem;
 	background-color: dimgrey;
 	width: -webkit-fill-available;
 }
@@ -37,16 +37,26 @@ div.work-in-progress {
 div.work-in-progress:before {
     content: "Work In Progress";
     position: absolute;
-    top: 18px;
-    right: -43px;
-    width: 150px;
+    top: 1.125rem;
+    right: -2.6875rem;
+    width: 9.375rem;
     text-align: center;
     transform: rotate(45deg);
     background: peru;
-    padding: 10px;
+    padding: 0.625rem;
     color: white;
-    font-size: 9px;
+    font-size: 0.5625rem;
     font-weight: 600;
 }
 
 a#toggle-additional-projects{color:var(--card-bg);text-decoration: none;cursor:pointer}
+
+@media (max-width: 600px) {
+  div.accordion-body {
+    padding: 1rem 1rem;
+  }
+  #main_accordion div {
+	  max-height: fit-content;
+  }
+
+}
