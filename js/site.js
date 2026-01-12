@@ -14,11 +14,9 @@
     const toggle = document.getElementById('theme-toggle');
     if(!toggle) return;
     if (body.classList.contains('dark')) {
-      $('#theme-toggle-icon').removeClass('fa-moon-o');
-      $('#theme-toggle-icon').addClass('fa-sun-o');
+      $('#theme-toggle-icon').removeClass('fa-moon-o').addClass('fa-sun-o');
     } else {
-      $('#theme-toggle-icon').removeClass('fa-sun-o');
-      $('#theme-toggle-icon').addClass('fa-moon-o');
+      $('#theme-toggle-icon').removeClass('fa-sun-o').addClass('fa-moon-o');
     }
   };
 
@@ -54,11 +52,9 @@ document.addEventListener('click', e => {
     const isDark = document.body.classList.toggle('dark');
     try{ localStorage.setItem('site-theme', isDark ? 'dark' : 'light'); }catch(e){}
     if (isDark) {
-      $('#theme-toggle-icon').removeClass('fa-moon-o');
-      $('#theme-toggle-icon').addClass('fa-sun-o');
+      $('#theme-toggle-icon').removeClass('fa-moon-o').addClass('fa-sun-o');
     } else {
-      $('#theme-toggle-icon').removeClass('fa-sun-o');
-      $('#theme-toggle-icon').addClass('fa-moon-o');
+      $('#theme-toggle-icon').removeClass('fa-sun-o').addClass('fa-moon-o');
     }
 
   }

@@ -58,5 +58,7 @@ a#toggle-additional-projects{color:var(--card-bg);text-decoration: none;cursor:p
   #main_accordion div {
 	  max-height: fit-content;
   }
-
+  a#toggle-additional-projects {
+    display: none;
+  }
 }
