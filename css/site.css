@@ -121,11 +121,11 @@ body{background:var(--bg);color:var(--text-color);display:flex;flex-direction:co
 }
 
 .work-overview-bg {
-  background-image: url('/media/index/work-overview-bg.jpg');
+  background-image: url('/media/index/featured-project-bg.png');
 }
 
-.featured-project-bg {
-  background-image: url('/media/index/featured-project-bg.png');
+.about-me-bg {
+  background-image: url('/media/index/work-overview-bg.jpg');
 }
 
 .values-bg {
