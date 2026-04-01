@@ -1,0 +1,197 @@
+/* CV Page Specific Styles */
+
+/* CV-specific layout & components */
+.cv-content {
+  max-width: 87.5rem;
+  margin: 1.25rem auto;
+  padding: 0 0.75rem;
+  padding-top: 1.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.site-grid {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.left-col {
+  flex: 0 0 32%;
+  min-width: 15rem;
+}
+
+.right-col {
+  flex: 1;
+  gap: 18px;
+}
+
+.profile-card {
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.left-col .site-card {
+  overflow: hidden;
+}
+
+.display-container {
+  position: relative;
+}
+
+.display-container img {
+  width: 100%;
+  display: block;
+}
+
+.display-bottomleft {
+  position: absolute;
+  right: auto;
+  left: 12px;
+  bottom: 12px;
+}
+
+.display-bottomleft h2 {
+  background: rgba(0, 0, 0, 0.45);
+  color: white;
+  padding: 0.375rem 0.625rem;
+  border-radius: 0.375rem;
+}
+
+.overlay h2 {
+  margin: 0;
+  color: var(--text-color);
+}
+
+.card-body {
+  padding: 1rem;
+  background: transparent;
+  text-align: left;
+}
+
+.card-body p {
+  margin: 0.375rem 0;
+}
+
+.profile-card .card-body a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.profile-card .card-body a:hover {
+  text-decoration: underline;
+}
+
+.site-card {
+  background: var(--card-bg);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.375rem 1.125rem rgba(2, 6, 23, 0.06);
+  overflow: hidden;
+}
+
+.site-card .section-title {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 0.625rem;
+}
+
+.site-card h5 {
+  margin: 0 0 0.375rem 0;
+}
+
+.site-card ul {
+  margin: 0.5rem 0 0 1.1rem;
+  padding: 0;
+}
+
+.site-card li {
+  margin: 0.375rem 0;
+  line-height: 1.35;
+}
+
+.site-card hr {
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  margin: 0.75rem 0;
+}
+
+.right-col .site-card {
+  margin-bottom: 0.875rem;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.icon {
+  margin-right: 0.5rem;
+  font-size: 1.05rem;
+  color: var(--accent);
+}
+
+.skill-bar {
+  background: rgba(0, 0, 0, 0.06);
+  border-radius: 999px;
+  height: 0.875rem;
+  overflow: hidden;
+  margin: 0.375rem 0 0.75rem;
+}
+
+.skill-fill {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem 0;
+  color: var(--muted);
+}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+/* CV inline styles moved to CSS */
+.shadow {
+  text-shadow: -2px 2px 6px #214567;
+}
+
+footer {
+  bottom: 0px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .site-grid {
+    flex-direction: column;
+  }
+  .left-col {
+    flex: 1;
+  }
+}
+
+/* Ensure accessibility: focus states for nav links */
+.site-nav .nav-link:focus {
+  outline: 2px solid rgba(43, 108, 176, 0.25);
+  outline-offset: 0.1875rem;
+}
+
+@media (max-width: 600px) {
+  .site-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .site-nav a {
+    font-size: 0.9rem;
+  }
+  .site-title {
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}

@@ -43,57 +43,160 @@ body{background:var(--bg);color:var(--text-color);display:flex;flex-direction:co
 /* make sure components read the CSS vars for background */
 .site-header{background:var(--card-bg);border-bottom:1px solid rgba(0,0,0,0.06)}
 
-/* --- CV specific layout & components --- */
-.cv-content{max-width:87.5rem;margin:1.25rem auto;padding:0 0.75rem}
-.site-grid{display:flex;gap:1.5rem;align-items:flex-start}
-.left-col{flex:0 0 32%;min-width:15rem}
-.right-col{flex:1}
-.profile-card{overflow:hidden;border-radius:0.75rem}
-.display-container{position:relative}
-.display-container img{width:100%;display:block}
-.display-bottomleft{position:absolute;left:0.75rem;bottom:0.75rem}
-.overlay h2{margin:0;color:var(--text-color)}
-.card-body{padding:1rem;background:transparent;text-align: left;}
-.site-card{background:var(--card-bg);border-radius:0.75rem;box-shadow:0 0.375rem 1.125rem rgba(2,6,23,0.06);overflow:hidden}
-.muted{color:var(--muted)}
-.icon{margin-right:0.5rem;font-size:1.05rem;color:var(--accent)}
-.skill-bar{background:rgba(0,0,0,0.06);border-radius:999px;height:0.875rem;overflow:hidden}
-.skill-fill{display:block;height:100%;background:var(--accent);border-radius:999px}
-.section-title{font-size:1.25rem;margin:0 0 0.75rem 0;color:var(--muted)}
-.mb{margin-bottom:1rem}
-
-@media (max-width:900px){
-  .site-grid{flex-direction:column}
-  .left-col{flex:1}
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 0.375rem 1.125rem rgba(0, 0, 0, 0.15);
 }
 
-/* Polished CV visuals */
-.cv-content{padding-top:1.25rem;padding-bottom:2.25rem}
-.left-col .site-card{overflow:hidden}
-.display-bottomleft{right:auto;left:12px;bottom:12px}
-.display-bottomleft h2{background:rgba(0,0,0,0.45);color:white;padding:0.375rem 0.625rem;border-radius:0.375rem}
-.card-body p{margin:0.375rem 0}
-.site-card .section-title{font-size:1.1rem;color:var(--muted);margin-bottom:0.625rem}
-.site-card h5{margin:0 0 0.375rem 0}
-.site-card ul{margin:0.5rem 0 0 1.1rem;padding:0}
-.site-card li{margin:0.375rem 0;line-height:1.35}
-.site-card hr{border:0;border-top:1px solid rgba(0,0,0,0.06);margin:0.75rem 0}
-.muted{color:var(--muted)}
-.profile-card .card-body a{color:var(--accent);text-decoration:none}
-.profile-card .card-body a:hover{text-decoration:underline}
-.skill-bar{margin:0.375rem 0 0.75rem}
+.back-to-top:hover {
+  background: #1e5394;
+  transform: translateY(-0.25rem);
+}
 
-/* Right column tweaks */
-.right-col{gap:18px}
-.right-col .site-card{margin-bottom:0.875rem}
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
 
-/* Ensure accessibility: focus states for nav links */
-.site-nav .nav-link:focus{outline:2px solid rgba(43,108,176,0.25);outline-offset:0.1875rem}
+/* Dark theme back to top button */
+.dark .back-to-top {
+  background: var(--accent);
+}
 
+.dark .back-to-top:hover {
+  background: #8bb9f0;
+}
 
-/* small screens */
-@media (max-width:600px){
-  .site-nav{display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;margin-top:0.5rem}
-  .site-nav a{font-size: .9rem;}
-  .site-title{padding:1rem 0;text-align:center;font-size: .9rem;}
+@media (max-width: 600px) {
+  .back-to-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+  }
+}
+.fullscreen-section {
+  border-radius: var(--radius);
+  min-height: 80vw;
+  min-width: 80vw;
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  box-shadow: 0px 0px 1.25rem rgba(0,0,0,0.45);
+  margin-bottom: 1.5rem;
+}
+
+.fullscreen-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Background images for home page sections */
+.beartooth-pass-bg {
+  background-image: url('/media/index/beartooth_pass.jpg');
+}
+
+.work-overview-bg {
+  background-image: url('/media/index/work-overview-bg.jpg');
+}
+
+.featured-project-bg {
+  background-image: url('/media/index/featured-project-bg.png');
+}
+
+.values-bg {
+  background-image: url('/media/index/values-bg.jpg');
+}
+
+.tools-bg {
+  background-image: url('/media/index/tools-bg.jpg');
+}
+
+.cta-bg {
+  background-image: url('/media/index/cta-bg.jpg');
+}
+
+/* Responsive: Disable parallax on mobile for better performance */
+@media (max-width: 768px) {
+  .fullscreen-section {
+    min-height: auto;
+    max-width: fit-content;
+    background-attachment: scroll;
+    padding: 3rem 0;
+  }
+}
+
+/* Back to Top Button */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 1.25rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+  box-shadow: 0 0.375rem 1.125rem rgba(0, 0, 0, 0.15);
+}
+
+.back-to-top:hover {
+  background: #1e5394;
+  transform: translateY(-0.25rem);
+}
+
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Dark theme back to top button */
+.dark .back-to-top {
+  background: var(--accent);
+}
+
+.dark .back-to-top:hover {
+  background: #8bb9f0;
+}
+
+@media (max-width: 600px) {
+  .back-to-top {
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+  }
 }
